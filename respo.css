@@ -1,0 +1,53 @@
+/* PC */
+@media (min-width: 992px) {
+}
+/* mtb va dt */
+@media (max-width: 991.98px) {
+  /* ẩn navbar */
+  .navbar {
+    display: none;
+  }
+  /* chuyển logo vào giữa */
+  .header-top {
+    position: relative;
+  }
+  .header__logo {
+    position: absolute;
+    left: 50%;
+    translate: -50% -50%;
+  }
+  /* căn lại menu */
+  .menu-header__icon {
+    position: absolute;
+    top: 38px;
+    left: 26px;
+    color: aliceblue;
+    width: 24px;
+  }
+  /* overplay */
+  .menu-overlay {
+    position: fixed;
+    border-color: blue;
+    inset: 0;
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+  }
+  .menu-checkbox:checked ~ .menu-overlay {
+    opacity: 12;
+    visibility: visible;
+  }
+}
+/* mtb */
+@media (min-width: 768px) and (max-width: 991.98px) {
+}
+/* dt */
+@media (max-width: 767.98px) {
+}
+/* tạm ẩn phần ko lq */
+.hero,
+.footer,
+main {
+  display: none;
+}
