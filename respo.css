@@ -1,5 +1,8 @@
 /* PC */
 @media (min-width: 992px) {
+  .mobile-header {
+    display: none;
+  }
 }
 /* mtb va dt */
 @media (max-width: 991.98px) {
@@ -37,6 +40,41 @@
   .menu-checkbox:checked ~ .menu-overlay {
     opacity: 12;
     visibility: visible;
+  }
+  .menu-drawer {
+    position: fixed;
+    background-color: black;
+    inset: 0 40% 0 0;
+    z-index: 2;
+    transform: translateX(-100%);
+    transition: 0.5s;
+    padding: 60px;
+  }
+  .menu-checkbox:checked ~ .menu-drawer {
+    transform: translateX(0);
+  }
+  .close__menu {
+    width: 24px;
+    color: aliceblue;
+  }
+  .menu-drawer__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .navbar__list {
+    margin-top: 25px;
+    flex-direction: column;
+  }
+  #navbar__list--mobile {
+    margin-top: 25px;
+  }
+  .navbar__link {
+    display: block;
+    font-size: 2rem;
+  }
+  .navbar__link:hover {
+    background-color: red;
   }
 }
 /* mtb */
